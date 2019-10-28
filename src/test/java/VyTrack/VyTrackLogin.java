@@ -13,17 +13,25 @@ public class VyTrackLogin {
 
         driver.get("https://qa2.vytrack.com/user/login");  // go to VyTrack Login Page
 
-        WebElement username = driver.findElement(By.name("_username"));
+        WebElement username = driver.findElement(By.name("_username"));  //to find username box
         username.sendKeys("user171");  // entering the username
 
-        WebElement password =driver.findElement(By.name("_password"));
+        WebElement password =driver.findElement(By.name("_password"));  //to find password box
         password.sendKeys("UserUser123");  // entering the  password
 
-        WebElement clickLogin = driver.findElement(By.name("_submit"));  // clicking the login button
-        clickLogin.click();
+        WebElement clickLogin = driver.findElement(By.name("_submit"));  //to find login button
+        clickLogin.click();  // clicking the login button
 
-        Thread.sleep(4000);
-        driver.close();
+        //to test if the app login
+        String expextedURL = "https://qa2.vytrack.com/";
+        String actualURL = driver.getCurrentUrl();
+        if(expextedURL.equals(actualURL)){
+            System.out.println("Test Passed");
+        }else{
+            System.out.println("Test Failed");
+        }
+
+        driver.close();  //to close the tab
 
     }
 
