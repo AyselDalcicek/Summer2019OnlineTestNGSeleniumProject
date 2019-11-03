@@ -7,13 +7,12 @@ import utils.BrowserFactory;
 
 public class TestForClassNameLocator {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = BrowserFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/multiple_buttons");
         WebElement heading = driver.findElement(By.className("h3"));
         System.out.println(heading.getText());
-
         driver.quit();
 
     }
