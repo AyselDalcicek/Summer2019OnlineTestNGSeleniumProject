@@ -15,7 +15,7 @@ public class TestCase7 {
         driver.findElement(By.name("email")).sendKeys("testers@email");
         WebElement warningMessage1 = driver.findElement(By.xpath("//small[@data-bv-validator='emailAddress']"));
         System.out.println(warningMessage1.getText());
-        WebElement warningMessage2 = driver.findElement(By.xpath("//small[@data-bv-validator='emailAddress']"));  // ????????
+        WebElement warningMessage2 = driver.findElement(By.xpath("//small[.='Email format is not correct']"));
         System.out.println(warningMessage2.getText());
 
         String expectedResult1 = "email address is not a valid";
