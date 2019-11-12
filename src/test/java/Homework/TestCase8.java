@@ -13,7 +13,7 @@ public class TestCase8 {
         driver.get("https://practice-cybertekschool.herokuapp.com");
         driver.findElement(By.linkText("Registration Form")).click();
         driver.findElement(By.name("phone")).sendKeys("t5711234354");
-        WebElement warningMessage = driver.findElement(By.cssSelector("small[style='display: block;']")); // ????????
+        WebElement warningMessage = driver.findElement(By.cssSelector("small[style='display: block;']"));
         System.out.println(warningMessage.getText());
 
         String expectedResult = "Phone format is not correct";

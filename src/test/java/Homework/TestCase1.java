@@ -5,13 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.BrowserFactory;
 
-import javax.swing.*;
-
 public class TestCase1 {
 
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = BrowserFactory.getDriver("firefox");
         driver.get("https://practice-cybertekschool.herokuapp.com");
         Thread.sleep(2000);
         driver.findElement(By.linkText("Sign Up For Mailing List")).click();

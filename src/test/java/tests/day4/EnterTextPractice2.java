@@ -6,9 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.BrowserFactory;
 
-import javax.swing.*;
-import java.sql.SQLOutput;
-
 public class EnterTextPractice2 {
 
         /*

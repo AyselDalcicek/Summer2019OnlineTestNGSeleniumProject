@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
-import javax.swing.*;
-
 public class FindElementsTest {
 
     public static void main(String[] args) {
