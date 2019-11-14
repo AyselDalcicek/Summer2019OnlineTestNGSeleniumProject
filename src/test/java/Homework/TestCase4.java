@@ -6,6 +6,12 @@ import org.openqa.selenium.WebElement;
 import utils.BrowserFactory;
 
 public class TestCase4 {
+    /*
+    Step 1. Go to https://practicecybertekschool.herokuapp.com
+    Step 2. Click on “Registration Form”
+    Step 3. Enter “123” into ﬁrst name input box.
+    Step 4. Verify that warning message is displayed: “ﬁrst name can only consist of alphabetical letters”
+     */
 
     public static void main(String[] args) throws InterruptedException {
 

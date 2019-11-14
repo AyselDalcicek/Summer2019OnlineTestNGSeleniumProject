@@ -9,6 +9,12 @@ import java.util.List;
 
 public class TestCase2 {
 
+    /*
+    Step 1. Go to https://practicecybertekschool.herokuapp.com
+    Step 2. Verify that number of listed examples is equals to 48.
+    Hint: use findElemnts() and size() methods.
+     */
+
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = BrowserFactory.getDriver("chrome");

@@ -7,6 +7,13 @@ import utils.BrowserFactory;
 
 public class TestCase5 {
 
+    /*
+    Step 1. Go to https://practicecybertekschool.herokuapp.com
+    Step 2. Click on “Registration Form”
+    Step 3. Enter “123” into last name input box.
+    Step 4. Verify that warning message is displayed:
+    “The last name can only consist of alphabetical letters and dash”
+     */
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = BrowserFactory.getDriver("chrome");
         driver.get("https://practice-cybertekschool.herokuapp.com");

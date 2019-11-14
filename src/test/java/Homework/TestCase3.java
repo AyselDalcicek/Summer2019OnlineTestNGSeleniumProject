@@ -7,6 +7,13 @@ import utils.BrowserFactory;
 
 public class TestCase3 {
 
+    /*
+    Step 1. Go to https://practicecybertekschool.herokuapp.com
+    Step 2. Click on “Multiple Buttons”
+    Step 3. Click on “Button 1”
+    Verify that result message is displayed: “Clicked on button one!”
+     */
+
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = BrowserFactory.getDriver("chrome");
