@@ -48,6 +48,8 @@ public class LocatorsReview {
         WebElement blueButton = driver.findElement(By.xpath("//*[text()='Blue']/preceding-sibling::input[@type='radio']"));
         Assert.assertTrue(blueButton.isSelected(), "Blue button is not selected");
     }
+
+
     @AfterMethod
     public void teardown(){
         driver.quit();
