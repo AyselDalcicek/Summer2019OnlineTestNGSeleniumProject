@@ -23,7 +23,7 @@ public class ReadAttributesTest {
         WebElement retrievePasswordButton = driver.findElement(By.id("form_submit"));
         //alternative to click, only if type="submit"
         retrievePasswordButton.submit();
-        driver.close();
+       // driver.close();
     }
 
 }

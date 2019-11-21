@@ -18,7 +18,7 @@ public class EnterTextPractice {
     public static void main(String[] args) {
         //grey text "browser" is not a value
         //it's a placeholder/ or name of the method parameter
-        //you dn't enter that
+        //you don't enter that
         //it comes up automatically
         WebDriver driver = BrowserFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/forgot_password");

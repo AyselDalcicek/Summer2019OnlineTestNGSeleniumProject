@@ -15,7 +15,7 @@ public class NavigationPractice {
                         driver.get("http://google.com");
                         //wait for 3seconds
                         //this is our custom method
-                        //since method is static we use class name to cal the method
+                        //since method is static we use class name to call the method
                         //as a parameter we provide number of seconds(time in seconds)
                         BrowserUtils.wait(3);
                         //to print page title

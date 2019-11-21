@@ -20,7 +20,7 @@ public class CssSelectorPractice {
         //## whatever
         WebDriver driver = BrowserFactory.getDriver("chrome");
         driver.get("https://practice-cybertekschool.herokuapp.com/multiple_buttons");
-        //let's fin all buttons, and click on them one by one
+        //let's find all buttons, and click on them one by one
         // why I put . instead of space? because it's 2 class names .btn.btn-primary
         //in this case, we will find all buttons that have: class="btn btn-primary"
         // or like this [class='btn btn-primary'], no need for .
