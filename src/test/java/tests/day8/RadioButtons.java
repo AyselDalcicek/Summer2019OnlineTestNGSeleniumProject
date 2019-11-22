@@ -11,7 +11,9 @@ import utils.BrowserFactory;
 import utils.BrowserUtils;
 import java.util.List;
 public class RadioButtons {
+
     private WebDriver driver;
+
     @BeforeMethod
     public void setup() {
         driver = BrowserFactory.getDriver("chrome");
@@ -36,7 +38,7 @@ public class RadioButtons {
     @Test(description = "Verify that red button is not selected")
     public void test2() {
         WebElement redButton = driver.findElement(By.id("red"));
-        //isSelected() will return tru if button already clicked
+        //isSelected() will return true if button already clicked
         Assert.assertFalse(redButton.isSelected()); // assertFalse will expect that condition is false
     }
     @Test(description = "Verify that green button is not clickable")

@@ -32,7 +32,7 @@ public class Dropdown {
         //step 1. Find dropdown and create a webelement
         WebElement dropdown = driver.findElement(By.id("dropdown"));
         //ste 2. Create a select object
-        //select class requires webelemnt object as a parameter
+        //select class requires webelement object as a parameter
         Select select = new Select(dropdown);
         //to select any option by visible text:
         // also you can select by value, or index
@@ -58,7 +58,7 @@ public class Dropdown {
         WebElement state = driver.findElement(By.id("state"));
         Select select = new Select(state);
 //        <option value="MD">Maryland</option>
-        //we can use tes, value or index for selection
+        //we can use test, value or index for selection
         select.selectByValue("MD");
         BrowserUtils.wait(2);
         Assert.assertEquals(select.getFirstSelectedOption().getText(), "Maryland");

@@ -9,11 +9,15 @@ import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 import java.util.List;
+
 public class CheckBoxes {
+
     // command + option + L - to organize code for Mac
     // control + alt + L - to organize code for windows
+
     private WebDriver driver;
     //private because it will be used only in this class
+
     @BeforeMethod
     public void setup() {
         driver = BrowserFactory.getDriver("chrome");
