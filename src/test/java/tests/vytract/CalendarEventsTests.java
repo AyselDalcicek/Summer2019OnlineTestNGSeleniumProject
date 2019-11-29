@@ -1,4 +1,4 @@
-package tests.day13.vytract;
+package tests.vytract;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,17 +12,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import java.util.concurrent.TimeUnit;
-  /*
-        url: https://qa1.vytrack.com/
-        username: storemanager85
-        password: UserUser123
-        ###Test case #1
-        Go to https://qa1.vytrack.com/
-        Login as a store manager
-        Navigate to Activities -> Calendar Events
-        Verify that page subtitle "All Calendar Events" is displayed
-         */
-
 public class CalendarEventsTests {
 
     private WebDriver driver;
@@ -40,17 +29,14 @@ public class CalendarEventsTests {
         driver.get("https://qa1.vytrack.com/");
         driver.findElement(By.id("prependedInput")).sendKeys("storemanager85");
         driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123", Keys.ENTER);
-
         WebElement activitiesElement = driver.findElement(By.linkText("Activities"));
         wait.until(ExpectedConditions.visibilityOf(activitiesElement));
         wait.until(ExpectedConditions.elementToBeClickable(activitiesElement));
         activitiesElement.click();
-
         WebElement calendarEventsElement = driver.findElement(By.linkText("Calendar Events"));
         wait.until(ExpectedConditions.visibilityOf(calendarEventsElement));
         wait.until(ExpectedConditions.elementToBeClickable(calendarEventsElement));
         calendarEventsElement.click();
-
         WebElement loaderMask = driver.findElement(By.cssSelector("div[class='loader-mask shown']"));
         wait.until(ExpectedConditions.invisibilityOf(loaderMask));
     }
@@ -69,6 +55,5 @@ public class CalendarEventsTests {
         driver.quit();
     }
 }
-
 
 

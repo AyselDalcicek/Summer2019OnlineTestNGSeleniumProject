@@ -50,7 +50,7 @@ public class RadioButtons {
     }
     //let's find all radio buttons and click on them one by one
     @Test(description = "Click on all radio buttons")
-    public void test4() {
+    public void test4() throws InterruptedException {
         //how to find all radio buttons?
         //find all radio buttons
         //any radio button will have type='radio' and input as a element type
@@ -59,6 +59,7 @@ public class RadioButtons {
         for (WebElement button : radioButtons) {
 //            if button is available for clicking and not clicked yet
             if (button.isEnabled() && !button.isSelected()) {
+                Thread.sleep(2000);
 //                then click on it
                 button.click();
 //                in this case, id attribute represents a name of the color
