@@ -10,6 +10,7 @@ import utils.Driver;
 //we will put here only before and after parts
 //In this way before and after methods will be the same
 //Every test class will extend testbase class
+
 public abstract class TestBase {
 
     @BeforeMethod

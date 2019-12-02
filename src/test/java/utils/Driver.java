@@ -10,6 +10,7 @@ public class Driver {
     //you can not d like this ,if constructor is private Driver obj = new Driver();
     private Driver(){
     }
+
     //if switch statement complains
     public static WebDriver get(){
         //if webdriver object was not created yet

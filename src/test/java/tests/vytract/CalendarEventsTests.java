@@ -20,23 +20,30 @@ public class CalendarEventsTests {
     @BeforeMethod
     public void setup(){
         driver = BrowserFactory.getDriver("chrome");
+
         //explicit wait
         wait = new WebDriverWait(driver, 10);
+
         //implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         //maximize browser
         driver.manage().window().maximize();
+
         driver.get("https://qa1.vytrack.com/");
         driver.findElement(By.id("prependedInput")).sendKeys("storemanager85");
         driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123", Keys.ENTER);
+
         WebElement activitiesElement = driver.findElement(By.linkText("Activities"));
         wait.until(ExpectedConditions.visibilityOf(activitiesElement));
         wait.until(ExpectedConditions.elementToBeClickable(activitiesElement));
         activitiesElement.click();
+
         WebElement calendarEventsElement = driver.findElement(By.linkText("Calendar Events"));
         wait.until(ExpectedConditions.visibilityOf(calendarEventsElement));
         wait.until(ExpectedConditions.elementToBeClickable(calendarEventsElement));
         calendarEventsElement.click();
+
         WebElement loaderMask = driver.findElement(By.cssSelector("div[class='loader-mask shown']"));
         wait.until(ExpectedConditions.invisibilityOf(loaderMask));
     }
@@ -49,10 +56,11 @@ public class CalendarEventsTests {
     @Test(description = "Verify that 'Create Calendar event' button is displayed")
     public void test2(){
         Assert.assertTrue(driver.findElement(By.cssSelector("[title='Create Calendar event']")).isDisplayed());
+       // Assert.assertTrue(driver.findElement(By.partialLinkText("Create Calendar")).isDisplayed());  // it also works
     }
     @AfterMethod
     public void teardown(){
-        driver.quit();
+        //driver.quit();
     }
 }
 

@@ -10,7 +10,9 @@ import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 public class FramesPractice {
+
     private WebDriver driver;
+
     @BeforeMethod
     public void setup(){
         driver = BrowserFactory.getDriver("chrome");
@@ -26,7 +28,7 @@ public class FramesPractice {
         //WITHOUT SWITCHING, WE CANNOT SEE INNER HTML DOCUMENT
         // which one to use? id, name, index, webelement?
         //1. id or name  <iframe id="mce_0_ifr" name="some_frame">
-        //2. webelment driver.findElement(By.cssSelector("iframe[class='some_frame']"));
+        //2. webelement driver.findElement(By.cssSelector("iframe[class='some_frame']"));
         //3. index [iframe1, iframe2, iframe3...]
         WebElement inputArea = driver.findElement(By.id("tinymce"));
         String expectedText= "Your content goes here.";
@@ -59,9 +61,13 @@ public class FramesPractice {
         //trying to find what is on the second floor
         WebElement content = driver.findElement(By.tagName("body"));
         System.out.println(content.getText());
+
         driver.switchTo().defaultContent();//to exit from all frames, got to first floor
+
         driver.switchTo().frame("frame-top"); // second floor
+
         driver.switchTo().frame("frame-left"); // third floor
+
         System.out.println(driver.findElement(By.tagName("body")).getText());//print text of body
     }
     @AfterMethod

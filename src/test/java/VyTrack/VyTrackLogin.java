@@ -22,7 +22,7 @@ public class VyTrackLogin {
                         //to find login button // clicking the login button
 
     /*    WebElement logginButton = driver.findElement(By.id("_submit"));
-        logginButton.click(); ---> we can also use this way */
+          logginButton.click(); ---> we can also use this way */
 
         //to test if the app login
         String expectedURL = "https://qa2.vytrack.com/";

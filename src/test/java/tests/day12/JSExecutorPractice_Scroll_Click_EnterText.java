@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
-public class JSExecutorPractice {
+public class JSExecutorPractice_Scroll_Click_EnterText {
 
     private WebDriver driver;
 
@@ -49,8 +49,10 @@ public class JSExecutorPractice {
         js.executeScript("arguments[0].scrollIntoView(true)", link);
         BrowserUtils.wait(2);
     }
+
+
     //    var btn1 = document.getElementsByTagName('a')[1];
-//    btn1.click()
+    //    btn1.click()
     @Test(description = "Click with JS executor")
     public void test3(){
         driver.get("http://practice.cybertekschool.com/dynamic_loading");

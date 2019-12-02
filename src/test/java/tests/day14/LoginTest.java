@@ -16,7 +16,7 @@ public class LoginTest extends TestBase {
         String url = ConfigurationReader.getProperty("url");
         //Driver.get() --> will return webdriver object
         //and then we can call webdriver methods like get(), findElement()....
-//        WebDriver driver = Driver.get();
+//        WebDriver driver = Driver.get(); --> so we do not need to create new reference variable. it works without this.
         Driver.get().get(url);
         //print page title
         System.out.println(Driver.get().getTitle());
@@ -25,7 +25,7 @@ public class LoginTest extends TestBase {
     }
 
     @Test
-    public void test2(){
+    public void test2(){  // if we extends DataBase Class we do not need to write previous code. Just this two lines will be enough.
         System.out.println(Driver.get().getTitle());
         BrowserUtils.wait(2);
     }
