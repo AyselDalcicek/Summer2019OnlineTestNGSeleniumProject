@@ -1,4 +1,5 @@
 package pages;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ import utils.Driver;
 //for each page of application
 //login page = login page class
 //every page class will store webelements and methods related to that page
-public class LoginPage extends BasePage {
+public class LoginPage extends BasePage{
 
     @FindBy(id = "prependedInput") //this line will initialize web element
     public WebElement userNameInput;
@@ -30,6 +31,7 @@ public class LoginPage extends BasePage {
         //Driver.get() return webdriver object
         PageFactory.initElements(Driver.get(), this);
     }
+
     /*
      * reusable login method
      * just call this method to login
@@ -42,5 +44,5 @@ public class LoginPage extends BasePage {
         //Keys.ENTER to replace login click
         passwordInput.sendKeys(password, Keys.ENTER);
     }
-}
 
+}
