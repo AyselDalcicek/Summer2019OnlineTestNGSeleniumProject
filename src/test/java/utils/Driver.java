@@ -7,7 +7,7 @@ public class Driver {
 
     private static WebDriver driver;
 
-    //you can not d like this ,if constructor is private Driver obj = new Driver();
+    //you can not do like this, if constructor is private Driver obj = new Driver();
     private Driver(){
     }
 
