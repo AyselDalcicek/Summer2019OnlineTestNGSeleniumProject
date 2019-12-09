@@ -1,11 +1,10 @@
-package tests.vytract;
+package tests.vytrack;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CalendarEventsPage;
 import pages.CreateCalendarEventPage;
 import pages.LoginPage;
 import tests.TestBase;
-import utils.BrowserUtils;
 
 public class CreateCalendarEventTests extends TestBase {
 
