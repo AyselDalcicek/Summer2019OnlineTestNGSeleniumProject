@@ -70,7 +70,9 @@ public class Driver {
             switch(browser){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions chromeOptions = new ChromeOptions();
+                    chromeOptions.setHeadless(true);
+                    driver = new ChromeDriver(chromeOptions);
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();

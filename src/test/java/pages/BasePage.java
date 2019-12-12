@@ -230,4 +230,8 @@ public class BasePage {
         BrowserUtils.waitForClickablility(userName, 5).click();
         BrowserUtils.waitForClickablility(myUser, 5).click();
     }
+
+    public void waitForPageSubTitle(String pageSubtitleText) {
+        new WebDriverWait(Driver.get(), 10).until(ExpectedConditions.textToBe(By.cssSelector("h1[class='oro-subtitle']"), pageSubtitleText));
+    }
 }
