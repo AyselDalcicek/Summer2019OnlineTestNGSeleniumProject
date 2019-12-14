@@ -1,5 +1,6 @@
 package tests.vytrack;
 
+
 import org.testng.annotations.Test;
 import pages.CreateCarPage;
 import pages.LoginPage;
@@ -35,3 +36,13 @@ public class CreateCarTests extends TestBase {
         extentTest.pass("New car was created");
     }
 }
+
+//        // Data Driven Testing --> If we Change data From Excel sheet we call it as Data Driven Testing.
+//
+//        //with many rows of data
+//        for(Map<String, String> value: testData){
+//            createCarPage.licensePlateElement.sendKeys(value.get("License Plate"));
+//        }
+//
+//    }
+//}

@@ -8,7 +8,6 @@ import utils.Driver;
 
 public class CreateCarPage extends BasePage {
 
-
     @FindBy(css = "[id^='custom_entity_type_LicensePlate']")
     public WebElement licensePlateElement;
 
@@ -27,6 +26,12 @@ public class CreateCarPage extends BasePage {
     //if this locator doesn't work, use [id^='uniform-custom_entity_type_Logo_file'] > span[class='action']
     @FindBy(name = "custom_entity_type[Logo][file]")
     public WebElement logoElement;
+
+    @FindBy(name = "custom_entity_type[ModelYear]")
+    public WebElement modelYearElement;
+
+    @FindBy(name = "custom_entity_type[Color]")
+    public WebElement colorElement;
 
 
     /*
