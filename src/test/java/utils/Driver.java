@@ -31,7 +31,6 @@ public class Driver {
             switch(browser){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
                         // We added it for speed
 //                        ChromeOptions chromeOptions = new ChromeOptions();  // //to configure chrome browser for tests
 //                        chromeOptions.setHeadless(false);   //to run tests without interface, set to true

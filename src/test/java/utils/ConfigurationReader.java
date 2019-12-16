@@ -19,7 +19,7 @@ public class ConfigurationReader {   // This class that loads Configuration.prop
     private static Properties configFile;  // It is reference variable
                                             // This class stands for log in custom .properties file an read it
 
-    static {   // whenever somebody is using this class static bloc will be executed only ones
+    static {   // whenever somebody is using this class static block will be executed only ones
                 // since we do not load the file again and again we use static block
         try {
             //provides access to file

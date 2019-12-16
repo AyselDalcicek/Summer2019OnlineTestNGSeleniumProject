@@ -11,6 +11,7 @@ import utils.ConfigurationReader;
 import utils.Driver;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 //this class will be a test foundation for all test classes
 //we will put here only before and after parts
@@ -71,6 +72,7 @@ public abstract class TestBase {
             url = env_url;
         }
         Driver.get().get(url);
+      //  Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     //ITestResult class describes the result of a test. (in TestNG)

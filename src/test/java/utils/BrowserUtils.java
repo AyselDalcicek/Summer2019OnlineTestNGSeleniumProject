@@ -75,7 +75,7 @@ public class BrowserUtils {
      * @param timeout
      * @return
      */
-    public static WebElement waitForClickablility(WebElement element, int timeout) {
+    public static WebElement waitForClickablity(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
@@ -155,7 +155,7 @@ public class BrowserUtils {
         }
     }
 
-
+    // Wait 15 seconds with polling interval of 200 milliseconds then click
     public static void clickWithWait(WebElement webElement) {
         Wait wait = new FluentWait<>(Driver.get())
                 .withTimeout(Duration.ofSeconds(15))
@@ -194,7 +194,7 @@ public class BrowserUtils {
         }
     }
 
-    // Vasyl's
+
     /*
      * Wait for proper page title
      *
