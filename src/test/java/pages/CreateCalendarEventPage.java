@@ -209,7 +209,7 @@ public class CreateCalendarEventPage extends BasePage {
     public void clickOnCreateCalendarEvent() {
         waitUntilLoaderMaskDisappear();
         BrowserUtils.waitForStaleElement(createCalendarEventBtn);
-        BrowserUtils.waitForClickablility(createCalendarEventBtn, 10);
+        BrowserUtils.waitForClickablity(createCalendarEventBtn, 10);
         createCalendarEventBtn.click();
     }
 
