@@ -36,6 +36,7 @@ public class CreateCalendarEventPage extends BasePage {
 
     @FindBy(css = "[id^='date_selector_oro_calendar_event_form_start']")
     public WebElement startDate;
+
     @FindBy(css = "[id^='date_selector_oro_calendar_event_form_end']")
     public WebElement endDate;
 
@@ -226,18 +227,22 @@ public class CreateCalendarEventPage extends BasePage {
     }
 
     public String getStartDate() {
+
         return startDate.getAttribute("value");
     }
 
-    public String getEndDate() {
+    public String getEndDate()
+    {
         return endDate.getAttribute("value");
     }
 
     public String getStartTime() {
+
         return startTime.getAttribute("value");
     }
 
     public String getEndTime() {
+
         return endTime.getAttribute("value");
     }
 
