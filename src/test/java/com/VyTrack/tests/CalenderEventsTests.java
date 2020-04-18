@@ -1,5 +1,6 @@
 package com.VyTrack.tests;
 
+import com.VyTrack.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import com.VyTrack.utils.BrowserFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +21,8 @@ public class CalenderEventsTests extends TestBase {
 
     @BeforeMethod
     public void setup(){
-        driver = BrowserFactory.getDriver("chrome");
+       // driver = BrowserFactory.getDriver("chrome");
+        driver = Driver.get();
         //explicit wait
         wait = new WebDriverWait(driver, 10);
         //implicit wait
